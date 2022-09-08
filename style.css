@@ -1,81 +1,154 @@
 :root {
-    --lightCTARed: hsl(356, 100%, 66%);
-    --lightCTARedHover: hsl(355, 100%, 74%);
-    --darkBlueHeadings: hsl(208, 49%, 24%);
-    --grayBlueFooter: hsl(240, 2%, 79%);
-    --darkGrayBlueBody: hsl(207, 13%, 34%);
-    --darkBlackBlueFooterBg: hsl(240, 10%, 16%);
+  --lightCTARed: hsl(356, 100%, 66%);
+  --lightCTARedHover: hsl(355, 100%, 74%);
+  --darkBlueHeadings: hsl(208, 49%, 24%);
+  --grayBlueFooter: hsl(240, 2%, 79%);
+  --darkGrayBlueBody: hsl(207, 13%, 34%);
+  --darkBlackBlueFooterBg: hsl(240, 10%, 16%);
 }
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-    color: white;
-    /* background: none; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: white;
+  list-style: none;
+  /* background: none; */
 }
 @font-face {
-    font-family: Overpass;
-    src: url('/assets/fonts/Overpass/static/Overpass-Regular.ttf');
+  font-family: Overpass;
+  src: url("/assets/fonts/Overpass/static/Overpass-Regular.ttf");
 }
 @font-face {
-    font-family: Ubuntu;
-    src: url('/assets/fonts/Ubuntu/Ubuntu-Regular.ttf');
+  font-family: Ubuntu;
+  src: url("/assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 @font-face {
-    font-family: Overlight;
-    src: url('/assets/fonts/Overpass/static/Overpass-Light.ttf');
+  font-family: Overlight;
+  src: url("/assets/fonts/Overpass/static/Overpass-Light.ttf");
 }
 body {
-    font-size: 16px;
-    text-align: center;
-    font-family: Overpass;
+  font-size: 16px;
+  text-align: center;
+  font-family: Overpass;
 }
 .hams {
-    display: none;
+  display: none;
 }
 header {
-    padding: 1.5em;
-    background-image: url('/images/bg-pattern-intro-mobile.svg'), linear-gradient(120deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-    background-size: 1200px, 100%;
-    background-position: -300px -250px, top left;
-    background-repeat: no-repeat;
-    border-radius: 0px 0px 0px 100px;
+  padding: 1.5em;
+  background-image: url("/images/bg-pattern-intro-mobile.svg"),
+    linear-gradient(120deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  /* 340% works as well for the background size */
+  background-size: 1200px, 100%;
+  background-position: -300px -250px, top left;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 0px 100px;
 }
 .head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .below_head {
-    padding: 100px 10px;
+  padding: 100px 10px;
 }
 .title {
-    font-size: 2.08em;
-
+  font-size: 2.08em;
 }
 .title_desc {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    font-size: 1.1em;
-    font-family: Overlight, sans-serif;
-    font-weight: 100;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+  font-family: Overlight, sans-serif;
+  font-weight: 100;
 }
 button {
-    padding: .8em 1em;
-    font-size: .9em;
-    border-radius: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: Ubuntu, sans-serif;
+  padding: 0.8em 1em;
+  font-size: 0.9em;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: Ubuntu, sans-serif;
 }
 button.free_trial {
-    background-color: white;
-    color: var(--lightCTARed);
-    margin-right: 5px;
+  background-color: white;
+  color: var(--lightCTARed);
+  margin-right: 5px;
 }
 button.learn_more {
-    background-color: transparent;
-    border: 1px solid white;
-    margin-left: 5px;
+  background-color: transparent;
+  border: 1px solid white;
+  margin-left: 5px;
+}
+.headings {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: var(--darkBlueHeadings);
+  margin: 40px 0px 20px;
+}
+article {
+  padding: 0 28px;
+}
+#introducing {
+  padding: 0 15px;
+}
+p.sub_desc {
+  color: var(--darkGrayBlueBody);
+  line-height: 30px;
+}
+.designed {
+  font-size: 1.6em;
+  margin: 100px 0px 40px;
+}
+.all_img {
+  width: 100%;
+  max-width: 500px;
+}
+.sectionb {
+  margin: 80px 0;
+  position: relative;
+  padding-top: 180px;
+}
+.sectionb .phone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.article_state {
+  background-image: url("/images/bg-pattern-circles.svg"),
+    linear-gradient(210deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background-size: 150%;
+  background-position-x: center;
+  background-position-y: -200px, 100%;
+  background-repeat: no-repeat;
+  padding-top: 210px;
+  padding-bottom: 100px;
+  border-radius: 0px 100px 0;
+}
+.state {
+  font-size: 1.9em;
+  padding-bottom: 0.5em;
+}
+#sectb_desc {
+  padding: 0 30px;
+  color: white;
+  font-family: Overlight, sans-serif;
+}
+footer {
+  font-family: Ubuntu, sans-serif;
+  background-color: var(--darkBlackBlueFooterBg);
+  margin-top: 100px;
+  padding: 70px 0;
+  border-radius: 0px 100px 0px 0px;
+}
+.foot_title {
+    margin: 55px 0 35px 0;
+    font-weight: 900;
+}
+.foot_light {
+    margin-top: 12px;
+    opacity: .8;
 }
