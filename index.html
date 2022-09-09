@@ -16,9 +16,14 @@
         <img src="/images/logo.svg" alt="">
         <img src="/images/icon-hamburger.svg" class="hamburger" alt="">
         <div class="head">
-          <div class="product hams">
-            <h5>Product <img src="/images/icon-arrow-light.svg" alt=""></h5>
-            <div class="dropdown" id="product">
+          <div class="product">
+            <h5 class="head_dropdown">Product
+              <picture>
+                <source media="(min-width: 900px)" srcset="images\icon-arrow-light.svg">
+                <img src="/images/icon-arrow-dark.svg" alt="">
+              </picture>
+            </h5>
+            <div class="dropdown dd_active" id="product">
               <div class="option opt_active">Overview</div>
               <div class="option opt_active">Pricing</div>
               <div class="option opt_active">Marketplace</div>
@@ -26,26 +31,36 @@
               <div class="option opt_active">Integrations</div>
             </div>
           </div>
-          <div class="company hams">
-            <h5>Company <img src="/images/icon-arrow-light.svg" alt=""></h5>
-            <div class="dropdown" id="company">
+          <div class="company">
+            <h5 class="head_dropdown">Company
+              <picture>
+                <source media="(min-width: 900px)" srcset="images\icon-arrow-light.svg">
+                <img src="/images/icon-arrow-dark.svg" alt="">
+              </picture>
+            </h5>
+            <div class="dropdown dd_active" id="company">
               <div class=" option opt_active">About</div>
               <div class="option opt_active">Team</div>
               <div class="option opt_active">Blog</div>
               <div class="option opt_active">Careers</div>
             </div>
           </div>
-          <div class="connect hams">
-            <h5>Connect <img src="/images/icon-arrow-light.svg" alt=""></h5>
-            <div class="dropdown" id="connect">
+          <div class="connect">
+            <h5 class="head_dropdown">Connect
+              <picture>
+                <source media="(min-width: 900px)" srcset="images\icon-arrow-light.svg">
+                <img src="/images/icon-arrow-dark.svg" alt="">
+              </picture>
+            </h5>
+            <div class="dropdown dd_active" id="connect">
               <div class="option opt_active">Contact</div>
               <div class="option opt_active">Newsletter</div>
               <div class="option opt_active">LinkedIn</div>
             </div>
           </div>
           <div class="buttons">
-            <button class="login learn_more hams">Login</button>
-            <button class="signup free_trial hams">Sign Up</button>
+            <button class="login learn_more">Login</button>
+            <button class="signup free_trial">Sign Up</button>
           </div>
         </div>
       </div>
@@ -65,7 +80,6 @@
         <div class="headings designed">
           Designed for the future
         </div>
-        <!-- <div class="sectiona_desc"> -->
         <picture id="illustrator">
           <source media="(min-width: 900px)" srcset="images\illustration-editor-desktop.svg">
           <img src="/images/illustration-editor-mobile.svg" alt="" class="all_img">
@@ -94,7 +108,6 @@
             </p>
           </article>
         </div>
-        <!-- </div> -->
       </section>
       <section class="sectionb">
         <img src="/images/illustration-phones.svg" alt="" class="all_img phone">
