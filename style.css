@@ -6,6 +6,7 @@
   --darkGrayBlueBody: hsl(207, 13%, 34%);
   --darkBlackBlueFooterBg: hsl(240, 10%, 16%);
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,26 +16,33 @@
   list-style: none;
   /* background: none; */
 }
+
 @font-face {
   font-family: Overpass;
   src: url("/assets/fonts/Overpass/static/Overpass-Regular.ttf");
 }
+
 @font-face {
   font-family: Ubuntu;
   src: url("/assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
+
 @font-face {
   font-family: Overlight;
   src: url("/assets/fonts/Overpass/static/Overpass-Light.ttf");
 }
+
 body {
+  background-color: #fafafa;
   font-size: 16px;
   text-align: center;
   font-family: Overpass;
 }
+
 .hams {
   display: none;
 }
+
 header {
   padding: 1.5em;
   background-image: url("/images/bg-pattern-intro-mobile.svg"),
@@ -45,17 +53,21 @@ header {
   background-repeat: no-repeat;
   border-radius: 0px 0px 0px 100px;
 }
+
 .head {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .below_head {
   padding: 100px 10px;
 }
+
 .title {
   font-size: 2.08em;
 }
+
 .title_desc {
   margin-top: 10px;
   margin-bottom: 40px;
@@ -63,6 +75,7 @@ header {
   font-family: Overlight, sans-serif;
   font-weight: 100;
 }
+
 button {
   padding: 0.8em 1em;
   font-size: 0.9em;
@@ -71,74 +84,87 @@ button {
   cursor: pointer;
   font-family: Ubuntu, sans-serif;
 }
+
 button.free_trial {
   background-color: white;
   color: var(--lightCTARed);
   margin-right: 5px;
 }
+
 button.learn_more {
   background-color: transparent;
   border: 1px solid white;
   margin-left: 5px;
 }
+
 .headings {
   font-size: 1.6em;
   font-weight: 700;
   color: var(--darkBlueHeadings);
   margin: 40px 0px 20px;
 }
+
 article {
   padding: 0 28px;
 }
+
 #introducing {
   padding: 0 15px;
 }
+
 p.sub_desc {
   color: var(--darkGrayBlueBody);
   line-height: 30px;
 }
+
 .designed {
   font-size: 1.6em;
   margin: 100px 0px 40px;
 }
+
 .all_img {
   width: 100%;
   max-width: 500px;
 }
+
 .sectionb {
   margin: 80px 0;
+  margin-top: 250px;
   position: relative;
-  padding-top: 180px;
-}
-.sectionb .phone {
-  position: absolute;
-  max-width: 400px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-}
-.article_state {
   background-image: url("/images/bg-pattern-circles.svg"),
     linear-gradient(210deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
   background-size: 150%;
   background-position-x: center;
   background-position-y: -200px, 100%;
   background-repeat: no-repeat;
-  padding-top: 210px;
-  padding-bottom: 100px;
   border-radius: 0px 100px 0;
 }
+
+.sectionb .phone {
+  position: absolute;
+  max-width: 400px;
+  bottom: 60%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.article_state {
+  padding-top: 210px;
+  padding-bottom: 100px;
+}
+
 .state {
   font-size: 1.9em;
   padding-bottom: 0.5em;
 }
+
 #sectb_desc {
   padding: 0 30px;
   color: white;
   font-family: Overlight, sans-serif;
 }
+
 footer {
   font-family: Ubuntu, sans-serif;
   background-color: var(--darkBlackBlueFooterBg);
@@ -146,22 +172,143 @@ footer {
   padding: 70px 0;
   border-radius: 0px 100px 0px 0px;
 }
+
 .foot_title {
-    margin: 55px 0 35px 0;
-    font-weight: 900;
-}
-.foot_light {
-    margin-top: 12px;
-    opacity: .8;
+  margin: 55px 0 35px 0;
+  font-weight: 900;
 }
 
-/* pseudo-tablet styling */
+.foot_light {
+  margin-top: 12px;
+  opacity: 0.8;
+}
+
+/* desktop styling */
 @media screen and (min-width: 900px) {
-    body {
-        background-image: linear-gradient(135deg, hsl(13, 100%, 95%), hsl(13, 100%, 100%)) ;
-    }
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
+  body {
+    overflow-x: hidden;
+  }
+  .hamburger,
+  .option {
+    display: none;
+  }
+  .hams {
+    display: block;
+  }
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  header {
+    background-image: url("/images/bg-pattern-intro-desktop.svg"),
+      linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-size: 2750px;
+    /* -1000px works for the background position y too */
+    background-position: -300px center, top left;
+  }
+  .head_container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 100px 50px 150px;
+  }
+  .head {
+    justify-content: flex-start;
+    margin-right: auto;
+  }
+  .product {
+    margin-left: 100px;
+  }
+  .company,
+  .connect {
+    margin-left: 50px;
+  }
+  .signup {
+    width: 8.5em;
+  }
+  button.login {
+    border: none;
+    margin-right: 1em;
+  }
+  .title {
+    font-size: 3.5em;
+  }
+  .all_img {
+    max-width: 800px;
+  }
+  .sectiona {
+    position: relative;
+    display: grid;
+    grid-template-columns: 150px 1fr 100px 1fr;
+    grid-template-rows: 150px 1fr;
+    margin-bottom: 80px;
+  }
+  .designed {
+    grid-column: 1/-1;
+  }
+  .sectiona .articles {
+    grid-column: 2/3;
+    text-align: left;
+  }
+  .sectiona #illustrator {
+    position: absolute;
+    bottom: -170px;
+    grid-column: 4/5;
+    grid-row: 2/-1;
+    min-width: 770px;
+  }
+  #introducing {
+    padding: 0;
+  }
+  .sectionb {
+    padding: 0 200px 0 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-size: 70%, 100%;
+    background-position-x: -180px, center;
+    background-position-y: -500px, center;
+  }
+  .sectionb .phone {
+    position: absolute;
+    top: -60px;
+    padding-right: 100px;
+    grid-column: 1/2;
+    min-width: 570px;
+  }
+  .sectionb .article_state {
+    padding: 100px 0;
+    grid-column: 2/3;
+    text-align: left;
+  }
+  #sectb_desc {
+    padding: 0;
+  }
+  section.sectionc {
+    position: relative;
+    margin: 100px 0;
+    padding-right: 150px;
+    display: grid;
+    margin-bottom: 400px;
+    padding: 200px, 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.sectionc .articles {
+    text-align: left;
+    margin-top: 100px;
+    grid-column: 2/3;
+  }
+  #illu {
+    max-width: 800px;
+    position: absolute;
+    left: -230px;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 300px 100px 150px;
+    text-align: left;
+  }
+  .foot_title {
+    margin-top: 0;
+  }
 }
