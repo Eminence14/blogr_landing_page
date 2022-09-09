@@ -200,6 +200,7 @@ footer {
     background-image: url("/images/bg-pattern-intro-desktop.svg"),
       linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-size: 1600px;
+    border-radius: 0px 0px 100px 100px;
     /* -1000px works for the background position y too */
     background-position: -300px center, top left;
   }
@@ -239,8 +240,9 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 50px 100px 100px 80px;
+    padding: 80px 100px 100px 80px;
     text-align: left;
+    border-radius: 100px 100px 0 0;
   }
   .foot_title {
     margin-top: 0;
