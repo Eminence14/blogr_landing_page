@@ -236,6 +236,9 @@ footer {
   .title {
     font-size: 3em;
   }
+  .sectionb .phone {
+    bottom: 70%;
+  }
   footer {
     display: flex;
     justify-content: space-between;
