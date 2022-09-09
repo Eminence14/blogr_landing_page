@@ -143,7 +143,7 @@ p.sub_desc {
 .sectionb .phone {
   position: absolute;
   max-width: 400px;
-  bottom: 60%;
+  bottom: 55%;
   right: 0;
   left: 0;
   margin: 0 auto;
@@ -183,8 +183,72 @@ footer {
   opacity: 0.8;
 }
 
-/* desktop styling */
+/* Tablet style */
 @media screen and (min-width: 900px) {
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .hamburger,
+  .option {
+    display: none;
+  }
+  .hams {
+    display: block;
+  }
+  header {
+    background-image: url("/images/bg-pattern-intro-desktop.svg"),
+      linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-size: 1600px;
+    /* -1000px works for the background position y too */
+    background-position: -300px center, top left;
+  }
+  article {
+    padding: 0 90px;
+  }
+  #sectb_desc {
+    padding: 0 90px;
+  }
+  .head_container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px;
+  }
+  .head {
+    justify-content: flex-start;
+    margin-right: auto;
+  }
+  .product {
+    margin-left: 100px;
+  }
+  .company,
+  .connect {
+    margin-left: 50px;
+  }
+  .signup {
+    width: 7em;
+  }
+  button.login {
+    border: none;
+    margin-right: 1em;
+  }
+  .title {
+    font-size: 3em;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 100px 100px 80px;
+    text-align: left;
+  }
+  .foot_title {
+    margin-top: 0;
+  }
+}
+
+/* desktop styling */
+@media screen and (min-width: 1300px) {
   body {
     overflow-x: hidden;
   }
@@ -211,23 +275,8 @@ footer {
     justify-content: flex-end;
     padding: 50px 100px 50px 150px;
   }
-  .head {
-    justify-content: flex-start;
-    margin-right: auto;
-  }
-  .product {
-    margin-left: 100px;
-  }
-  .company,
-  .connect {
-    margin-left: 50px;
-  }
   .signup {
     width: 8.5em;
-  }
-  button.login {
-    border: none;
-    margin-right: 1em;
   }
   .title {
     font-size: 3.5em;
