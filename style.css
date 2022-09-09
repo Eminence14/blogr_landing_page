@@ -53,11 +53,13 @@ header {
   background-repeat: no-repeat;
   border-radius: 0px 0px 0px 100px;
 }
-
-.head {
+.head_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+img.hamburger {
+  margin-left: auto;
 }
 
 .below_head {
@@ -204,6 +206,17 @@ footer {
     /* -1000px works for the background position y too */
     background-position: -300px center, top left;
   }
+  .head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .connect {
+    margin-right: auto;
+  }
+  div.buttons {
+    display: flex;
+  }
   article {
     padding: 0 90px;
   }
@@ -216,7 +229,7 @@ footer {
     padding: 50px;
   }
   .head {
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-right: auto;
   }
   .product {
@@ -293,7 +306,7 @@ footer {
   .sectiona {
     position: relative;
     display: grid;
-    grid-template-columns: 150px 1fr 100px 1fr;
+    grid-template-columns: 50px 1fr 50px 1fr;
     grid-template-rows: 150px 1fr;
     margin-bottom: 80px;
   }
@@ -340,7 +353,7 @@ footer {
   section.sectionc {
     position: relative;
     margin: 100px 0;
-    padding-right: 150px;
+    padding-right: 50px;
     display: grid;
     margin-bottom: 400px;
     padding: 200px, 0;
