@@ -271,6 +271,7 @@ footer {
     background-size: 2750px;
     /* -1000px works for the background position y too */
     background-position: -300px center, top left;
+    border-radius: 0px 0px 0px 100px;
   }
   .head_container {
     display: flex;
@@ -358,6 +359,7 @@ footer {
     align-items: flex-start;
     padding: 80px 300px 100px 150px;
     text-align: left;
+    border-radius: 0px 100px 0px 0px;
   }
   .foot_title {
     margin-top: 0;
