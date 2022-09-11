@@ -193,6 +193,11 @@ footer {
   opacity: 0.8;
 }
 
+.foot_light:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* small screen */
 @media screen and (max-width: 400px) {
   .free_trial {
@@ -231,9 +236,10 @@ footer {
     margin: 20px 0;
     color: var(--darkBlueHeadings);
     font-size: 1.1em;
+    font-family: Ubuntu;
   }
   .head_dropdown:hover {
-    font-size: 1.15em;
+    font-weight: 900;
     opacity: 0.8;
     cursor: pointer;
   }
@@ -296,9 +302,51 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
   }
-  .hamburger,
-  .option {
+  h5.head_dropdown:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .hamburger {
     display: none;
+  }
+  .dropdown {
+    display: none;
+  }
+  .dropdown.dd_activated {
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    text-align: left;
+    background-color: white;
+    padding: 20px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 30px -10px var(--darkBlackBlueFooterBg);
+    width: 120px;
+  }
+  .product, .company, .connect {
+    position: relative;
+  }
+  .dropdown.dd_activated#product {
+    margin-left: -30px;
+  }
+  .dropdown.dd_activated#company {
+    margin-left: -15px;
+    width: 100px;
+  }
+  .dropdown.dd_activated#connect {
+    margin-left: -25px;
+  }
+  .option {
+    color: var(--darkBlueHeadings);
+    font-size: 0.9em;
+    font-family: Ubuntu;
+    font-weight: 500;
+    padding: 5px;
+  }
+  .option:hover {
+    font-weight: 900;
+    cursor: pointer;
   }
   header {
     background-image: url("/images/bg-pattern-intro-desktop.svg"),
@@ -371,13 +419,6 @@ footer {
 @media screen and (min-width: 1300px) {
   body {
     overflow-x: hidden;
-  }
-  .hamburger,
-  .option {
-    display: none;
-  }
-  .hams {
-    display: block;
   }
   .container {
     max-width: 1440px;

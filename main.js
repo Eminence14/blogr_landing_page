@@ -18,6 +18,5 @@ function showMenu() {
 function dropEm(e) {
     let val = e.target.parentElement.children[1]
     val.classList.toggle('dd_active')
+    val.classList.toggle('dd_activated')
 }
-
-// console.log(headDropDown)
